@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predicting Wages Based On Demographics</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predicting Wages Based On Demographics">
+  <meta name="author" content="Nigel Kerr">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predicting Wages Based On Demographics</h1>
+    <h2>Making the Limits of Machine Learning Personal</h2>
+    <p>Nigel Kerr<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Rainbows and Unicorns</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Machine learning techniques and the abundant computing power to use them create
+many opportunities to make predictions and classifications that have been
+difficult heretofore.</p>
+
+<p>Media hype around machine-learning is considerable and sustained, to link only a few:</p>
+
+<ul>
+<li><a href="http://www.wired.com/insights/2014/03/use-data-tell-future-understanding-machine-learning/">Use Data to Tell the Future: Understanding Machine Learning</a>, Wired, 2014</li>
+<li><a href="http://www.computing.co.uk/ctg/news/2434719/-immensely-powerful-machine-learning-has-potential-to-predict-the-future">Immensely powerful’ machine learning has potential to predict the future</a>, Computing, 2015</li>
+<li><a href="https://channels.theinnovationenterprise.com/articles/unlocking-the-potential-of-machine-learning">Unlocking The Potential Of Machine Learning</a>, Innovation Enterprise, 2016</li>
+</ul>
+
+<p>With appropriate data and techniques, it seems that all kinds of problems can be solved.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>NOT ALL Rainbows and Unicorns</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Like any tool we use, machine learning requires decisions:</p>
+
+<ol>
+<li>how are the training data collected?</li>
+<li>how are the training data tidied?</li>
+<li>how representative of a populations variations is the training data?</li>
+<li>what variables will be used for prediction?</li>
+<li>how are predictions validated after the model is built?</li>
+<li>how will the prediction be used?</li>
+</ol>
+
+<p>Inattention or negligence on any of these decisions may yield a predictive machine 
+learning model with blind-spots and poor prediction, or exerts unaccountable influence
+over lives or pubic business.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Poor Data Source vs. The Public</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We present an app to allow a user to explore these dangers:</p>
+
+<p><a href="https://attack-plan-r.shinyapps.io/fproject/">https://attack-plan-r.shinyapps.io/fproject/</a></p>
+
+<p>The app accepts user input on some demographic data to make a possibly wildly-inaccurate prediction 
+for their annual income.  The <code>Wage</code> dataset from the ISLR R package 
+is not good for predicting much, for example one of the columns:</p>
+
+<pre><code class="r">summary(Wage$sex)
+</code></pre>
+
+<pre><code>##   1. Male 2. Female 
+##      3000         0
+</code></pre>
+
+<p>If these data were used to predict for public policy reasons, there are a lot of people who
+will be misrepresented on this question alone.  The app describes how the user-input differs
+from the model training data.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Where to Go From Here</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The example app attempts to show the potential disconnects on a small scale.<br>
+Because statistics and compute power are so easy to use now, machine learning may be going on right now without us knowing it in our everyday life.</p>
+
+<p>As citizens and consumers, we must from now on be alert to what machine learning
+may be shaping our health, happiness and well-being, and that of others.  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Rainbows and Unicorns'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NOT ALL Rainbows and Unicorns'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Poor Data Source vs. The Public'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Where to Go From Here'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
